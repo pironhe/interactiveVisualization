@@ -1,0 +1,16 @@
+
+.sidenav {
+  display: block;
+    width: 160px;
+    height: 200px;
+    position: fixed;
+    float: left;
+    z-index: 1;
+    top: 60px;
+    left: 25px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border: 2px solid #787878;
+    border-radius: 10px;
+  }

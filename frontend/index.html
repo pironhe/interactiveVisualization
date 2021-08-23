@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="index.js"></script>
+        <title>Visualisation interactive</title>
+    </head>
+    <body>
+
+        <!--<p>Top of the box</p>-->
+        <div class="sidenav">
+            <h1>Parameters:</h1>
+            <div class="slidecontainer">
+              <p>Min number markers</p>
+              <input type="range" min="1" max="100" value="10" class="slider" id="myRange1">
+              <p>Value: <span id="demo1"></span></p>
+            </div>
+            <div class="slidecontainer">
+              <p>Max number markers</p>
+              <input type="range" min="1" max="100" value="30" class="slider" id="myRange2">
+              <p>Value: <span id="demo2"></span></p>
+            </div>
+
+            <!--<div class="param">
+                <label for="muValue">&mu; value</label>
+                <input type="text" class="form-control" name="muValue" required id="muValue" #muValue>
+            </div>
+            <div class="param">
+                <label for="kappavalue">&kappa; value</label>
+                <input type="text" class="form-control" name="kappavalue" required id="kappavalue" #kappavalue>
+            </div>-->
+            <!--<div class="param">
+                    <button onclick="submit()">Compute</button>
+            </div>-->
+            <!--<div class="param">
+                    <button onclick="getter()">Get</button>
+            </div>
+            <div class="param">
+                    <button onclick="matrixGetter()">Build</button>
+            </div>-->
+            <div class="param">
+                    <button onclick="preprocess()">Preprocess</button>
+            </div>
+            <div class="param">
+                    <button onclick="solve()">Solve</button>
+            </div>
+            <!--<div class="param">
+                    <button onclick="getResults()">Results</button>
+            </div>-->
+            <div class="param">
+                    <button onclick="sendParams()">Send Parameters</button>
+            </div>
+            <!--<div class="param">
+                    <button onclick="getParams()">Get Parameters</button>
+            </div>
+            <div class="param">
+                    <button onclick="represent()">represent</button>
+            </div>-->
+            <div class="param">
+                    <button onClick="getbicluster()">Results</button>
+            </div>
+            <div class="param">
+                    <button onClick="reset()">Reset Page</button>
+            </div>
+        </div>
+        <div class="notmap">
+            <input type=file id="file-selector" multiple>
+            <button onclick="editPage()">Send</button>
+            <p>File parameters:</p>
+            <div class="checkers">
+              <input type="checkbox" id="transpose" name="transpose">
+              <label for="transpose">Genes on columns</label>
+            </div>
+            <div class="checkers">
+              <input type="checkbox" id="geneNames" name="geneNames">
+              <label for="geneNames">Names on columns</label>
+            </div>
+            <div class="checkers">
+              <input type="checkbox" id="cellNames" name="cellNames">
+              <label for="cellNames">Names on lines</label>
+            </div>
+        </div>
+        <div class="map" id="fleetContent">
+        </div>
+
+            <!--<div class="col">
+                <div class="square" id="11" onmouseover="mOver(this)" onmouseout="mOut(this)">
+                    Mouse Over Me
+                </div>
+                <div class="square" id="12" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+                    Mouse Over Me
+                </div>
+                <div class="square" id="13" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+                    Mouse Over Me
+                </div>
+                <div class="square" id="14" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+                    Mouse Over Me
+                </div>
+            </div>-->
+
+
+  <script>
+  var slider1 = document.getElementById("myRange1");
+  var output1 = document.getElementById("demo1");
+  output1.innerHTML = slider1.value;
+
+  slider1.oninput = function() {
+    output1.innerHTML = this.value;
+  }
+
+  var slider2 = document.getElementById("myRange2");
+  var output2 = document.getElementById("demo2");
+  output2.innerHTML = slider2.value;
+
+  slider2.oninput = function() {
+    output2.innerHTML = this.value;
+  }
+
+
+  </script>
+    </body>
+
+</html>
